@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestMain {
@@ -11,9 +8,20 @@ public class TestMain {
     private ArrayList<Occupant> occupants;
 
     @BeforeEach
-    public void setUp(Main m, ArrayList<Occupant> o) {
-        mainInstance = m;
-        occupants = o;
+    public void setUp() {
+        mainInstance = new Main();
+        occupants = new ArrayList<Occupant>();
+        occupants.add(new Occupant("Dave", "Smith", "123 main st.", "seattle", "wa", 43));
+        occupants.add(new Occupant("Alice", "Smith", "123 Main St.", "Seattle", "WA", 45));
+        occupants.add(new Occupant("Bob", "Williams", "234 2nd Ave.", "Tacoma", "WA", 26));
+        occupants.add(new Occupant("Carol", "Johnson", "234 2nd Ave", "Seattle", "WA", 67));
+        occupants.add(new Occupant("Eve", "Smith", "234 2nd Ave.", "Tacoma", "WA", 25));
+        occupants.add(new Occupant("Frank", "Jones", "234 2nd Ave.", "Tacoma", "FL", 23));
+        occupants.add(new Occupant("George", "Brown", "345 3rd Blvd., Apt. 200", "Seattle", "WA", 18));
+        occupants.add(new Occupant("Helen", "Brown", "345 3rd Blvd. Apt. 200", "Seattle", "WA", 18));
+        occupants.add(new Occupant("Ian", "Smith", "123 main st ", "Seattle", "Wa", 18));
+        occupants.add(new Occupant("Jane", "Smith", "123 Main St.", "Seattle", "WA", 13));
+
       }
     @Test
     public void testOccupantPerHouse() {

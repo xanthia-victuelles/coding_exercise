@@ -88,26 +88,11 @@ public class Main {
         for (Occupant occupant : sortedAgeLastName) {
             System.out.println(occupant);
         }
-
-        //Unit Test with JUnit
-        System.out.println("____________________________");
-        System.out.println("Running Unit Test");
-        System.out.println("____________________________");
-
-        TestMain test = new TestMain();
-        test.setUp(m, occupants); //Passing the current instance for testing
-        test.testSortedAlphaAge();
-        test.testOccupantPerHouse();
-
-        System.out.println("Test completed");
-
-
-
     }
 }
 /*
 Sample Output:
-/Users/katemasangkay/Library/Java/JavaVirtualMachines/openjdk-22/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=51403:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/out/production/coding_exercise:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-api-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/opentest4j-1.2.0.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-platform-commons-1.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/apiguardian-api-1.1.2.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-params-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-engine-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-platform-engine-1.8.1.jar Main
+/Users/katemasangkay/Library/Java/JavaVirtualMachines/openjdk-22/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52191:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/out/production/coding_exercise:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-api-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/opentest4j-1.2.0.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-platform-commons-1.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/apiguardian-api-1.1.2.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-params-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-jupiter-engine-5.8.1.jar:/Users/katemasangkay/Documents /GitHub/coding_exercise_expeditors/lib/junit-platform-engine-1.8.1.jar Main
 Size of List: 10
 ____________________________
    Occupant per household
@@ -126,11 +111,6 @@ Alice Smith, 123 Main St., Seattle, WA, 45
 Dave Smith, 123 main st., seattle, wa, 43
 Eve Smith, 234 2nd Ave., Tacoma, WA, 25
 Bob Williams, 234 2nd Ave., Tacoma, WA, 26
-____________________________
-Running Unit Test
-____________________________
-Test completed
 
 Process finished with exit code 0
-
 */

@@ -19,3 +19,9 @@ output to the console or write to a text file.
 are created to print the expected output.
 * Initialized an ArrayList of Occupant object to import the data; I chose to use an ArrayList for its built-in function 
 but ultimately for its ability to dynamically change in size. 
+
+**JUnit for testing**
+* Tested for the number of occupants based on the input data. 
+* Tested for sorted alphabetical last name then first name of occupants older than 18. 
+
+_NOTE:_ Sample run is located in Main.java
