@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Household {
 
@@ -19,14 +20,28 @@ public class Household {
         //Checking the size of the list
         System.out.println("Size of List: " + occupants.size());
 
-        //Sorting occupants that are older than 18
-        ArrayList<Occupant> sortedAge = new ArrayList<Occupant>();
+        //Each number of occupants per household
+        ArrayList<Occupant> household = new ArrayList<Occupant>();
+
+
+        //Sorting occupants that are older than 18 first
+        ArrayList<Occupant> sortedAgeLastName = new ArrayList<Occupant>();
         for(Occupant occupant : occupants ){
             if (occupant.age >18){
-                sortedAge.add(occupant);
-                System.out.println(occupant);
+                sortedAgeLastName.add(occupant);
             }
         }
+        System.out.println("Sorting by age and lastname");
+
+        //Sorting by lastname; using comparator to extract the lastName and compares alphabetically
+        sortedAgeLastName.sort(Comparator.comparing(Occupant:: getLastName)); //method reference
+
+        //Printing data for each occupant
+        for (Occupant occupant : sortedAgeLastName){
+            System.out.println(occupant);
+        }
+
+
 
         //
 
