@@ -20,6 +20,6 @@ public class Household {
 
     @Override
     public String toString() {
-        return "Address: " + address + "Occupants: " +this.getHouseholdCount();
+        return "Address: " + address + " Occupants: " +this.getHouseholdCount();
     }
 }

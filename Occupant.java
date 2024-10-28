@@ -15,13 +15,22 @@ public class Occupant {
         this.age = age;
     }
 
+    public String getAddress(){
+        return (this.address + ", " + this.city + ", " + this.state);
+
+    }
+
     public String getFullAddress() {
-        return this.address + ", " + this.city + ", " + this.state;
+        return (address + ", " + city + ", " + state)
+                .toLowerCase()                   // Convert to lowercase
+                .replaceAll("[.,]", "")           // Remove periods and commas
+                .replaceAll("\\s+", " ")          // Replace multiple spaces with a single space
+                .trim();
     }
 
     @Override
     public String toString() {
-        return this.firstName + " " + this.lastName + ", " + getFullAddress() + ", " + this.age;
+        return this.firstName + " " + this.lastName + ", " + getAddress() + ", " + this.age;
     }
 
     public String getFirstName() {
