@@ -1,16 +1,20 @@
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
+
 
 public class Main {
 
+    /* This function returns an ArrayList of Household object and takes an Arraylist of Occupants
+    * For each occupant, checks if the address is already in the list. If it is not in, it adds it to Households as a newHouse.
+    * Additionally, adding the occupant along to the newHouse. */
     public ArrayList<Household> occupantPerHouse(ArrayList<Occupant> occupants){
         ArrayList<Household> households = new ArrayList<Household>();
         for (Occupant o : occupants) {
             //to check if the household already exist
             Household existHouse = null;
+
             for (Household h : households) {
-                if (h.address.equalsIgnoreCase(o.getFullAddress())){
+                if (h.address.equalsIgnoreCase(o.getFullAddress())){ //getFullAddress() is only used to clean the data here.
                     existHouse = h;
                     break;
                 }
@@ -19,7 +23,7 @@ public class Main {
                 existHouse.addOccupant(o);
             }else {
                 Household newHouse = new Household(o.getFullAddress());
-                newHouse.addOccupant(o);
+                newHouse.addOccupant(o); // Adds occupant to the newHouse obj
                 households.add(newHouse);
             }
         }
@@ -29,6 +33,9 @@ public class Main {
 
         return households;
     }
+    /*This function returns an Arraylist of sorted occupants by last name and age is older than 18
+    * it takes in Arraylist of occupants. Fisrt, filtering the occupants age, then using the sorted list to sort the list
+    * alphabetically.*/
 
     public ArrayList<Occupant> sortedAlphaAge(ArrayList<Occupant> occupants){
         ArrayList <Occupant> sortedAgeLastName = new ArrayList<Occupant>();
@@ -37,7 +44,6 @@ public class Main {
                 sortedAgeLastName.add(occupant);
             }
         }
-
         //Sorting by lastname; using comparator to extract the lastName and compares alphabetically
         sortedAgeLastName.sort(Comparator.comparing(Occupant::getLastName)); //method reference
 
@@ -49,8 +55,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
         // Create an ArrayList of occupants
-        Main m= new Main();
         ArrayList<Occupant> occupants = new ArrayList<>();
         occupants.add(new Occupant("Dave", "Smith", "123 main st.", "seattle", "wa", 43));
         occupants.add(new Occupant("Alice", "Smith", "123 Main St.", "Seattle", "WA", 45));
@@ -66,8 +72,11 @@ public class Main {
         //Checking the size of the list
         System.out.println("Size of List: " + occupants.size());
 
+        Main m= new Main();
+
         //Each number of occupants per household
         ArrayList<Household> households = m.occupantPerHouse(occupants);
+        //Printing data for each household
         for(Household h : households){
             System.out.println(h);
         }

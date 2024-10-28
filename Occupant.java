@@ -19,8 +19,8 @@ public class Occupant {
         return (this.address + ", " + this.city + ", " + this.state);
 
     }
-
-    public String getFullAddress() {
+    /*Only used to compare address; Cleans the data; We may not want this to be the official address*/
+    protected String getFullAddress() {
         return (address + ", " + city + ", " + state)
                 .toLowerCase()                   // Convert to lowercase
                 .replaceAll("[.,]", "")           // Remove periods and commas
@@ -30,9 +30,8 @@ public class Occupant {
 
     @Override
     public String toString() {
-        return this.firstName + " " + this.lastName + ", " + getAddress() + ", " + this.age;
+        return this.firstName + " " + this.lastName + ", " + this.getAddress() + ", " + this.age;
     }
-
     public String getFirstName() {
         return this.firstName;
     }

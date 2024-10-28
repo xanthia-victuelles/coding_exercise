@@ -14,6 +14,8 @@ output to the console or write to a text file.
 
 **Implementation**
 * Created an Occupant object that contains the first name, last name, address, city, state,and age. 
+* Created a Household object that has a list of occupants and address.
+* Main is initialized as m in Main.java because I created functions **occupantPerHouse** and **sortedAlphaAge**; These functions
+are created to print the expected output.
 * Initialized an ArrayList of Occupant object to import the data; I chose to use an ArrayList for its built-in function 
 but ultimately for its ability to dynamically change in size. 
-* 
